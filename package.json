@@ -1,0 +1,64 @@
+{
+  "name": "observable-context",
+  "version": "0.1.0",
+  "description": "Rxjs + React Context + useReducer = Small Redux !!",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/observable-context.esm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build:rollup && npm run build:entry",
+    "build:rollup": "rollup --config rollup.config.js",
+    "build:entry": "node scripts/writeEntryFile.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kunduin/observable-context.git"
+  },
+  "keywords": [
+    "rxjs",
+    "hooks",
+    "context",
+    "store"
+  ],
+  "author": "Bay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kunduin/observable-context/issues"
+  },
+  "homepage": "https://github.com/Kunduin/observable-context#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@rollup/plugin-commonjs": "^19.0.1",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.2",
+    "@rollup/plugin-typescript": "^8.2.3",
+    "@storybook/addon-actions": "^6.3.4",
+    "@storybook/addon-essentials": "^6.3.4",
+    "@storybook/addon-links": "^6.3.4",
+    "@storybook/react": "^6.3.4",
+    "@types/react": "^17.0.14",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.25.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "rollup": "^2.53.2",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "typescript": "^4.3.5"
+  },
+  "peerDependencies": {
+    "react": ">=16.8",
+    "react-dom": ">=16.8",
+    "rxjs": ">=7"
+  },
+  "dependencies": {}
+}
