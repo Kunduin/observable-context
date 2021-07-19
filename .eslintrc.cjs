@@ -5,7 +5,8 @@ module.exports = {
     jest: true
   },
   extends: [
-    'standard'
+    'standard',
+    'plugin:react-hooks/recommended'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -16,5 +17,7 @@ module.exports = {
     '@typescript-eslint', 'jest'
   ],
   rules: {
+    'no-use-before-define': 0,
+    'no-unused-vars': 'off'
   }
 }

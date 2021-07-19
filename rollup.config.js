@@ -44,11 +44,6 @@ const output = [{
 export default defineConfig({
   // Tell Rollup the entry point to the package
   input: 'src/index.ts',
-  // Tell Rollup which packages to ignore
-  // Rollup has treeshaking by default, but we can optimize it further...
-  treeshake: {
-    propertyReadSideEffects: false
-  },
   // Establish Rollup output
   output,
   plugins: [
@@ -85,7 +80,7 @@ export default defineConfig({
           declaration: true,
           declarationMap: true,
           jsx: 'react'
-        }
+        },
       },
       check: true
     }),

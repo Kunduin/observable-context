@@ -1,1 +1,1 @@
-export * from './createObservableContext'
+export { createRxContext, createObservableContext } from './createObservableContext'
