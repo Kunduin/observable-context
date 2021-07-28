@@ -70,17 +70,19 @@ export default defineConfig({
           '**/*.test.ts',
           '**/*.spec.tsx',
           '**/*.test.tsx',
+          '**/*.stories.tsx',
           // TS defaults below
           'node_modules',
           'bower_components',
-          'jspm_packages'
+          'jspm_packages',
+          'example'
         ],
         compilerOptions: {
           sourceMap: true,
           declaration: true,
           declarationMap: true,
           jsx: 'react'
-        },
+        }
       },
       check: true
     }),
