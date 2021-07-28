@@ -1,15 +1,32 @@
 import React, { PropsWithChildren } from 'react'
-import { BehaviorSubject } from 'rxjs'
-import { ObservableContext } from './type'
+import { BehaviorLikeSubject, ObservableContext } from './type'
+import { useIsomorphicLayoutEffect } from './useIsomorphicLayoutEffect'
 
+/**
+ * provider props, all props are provided to overwrite and test.
+ */
 export interface ObservableProviderProps<InputType> {
-  observable$?: BehaviorSubject<InputType>;
+  subject?: BehaviorLikeSubject<InputType>
+  value?: InputType
 }
 
-export function createObservableProvider <InputType> (Context: ObservableContext<InputType>, initObservable$: BehaviorSubject<InputType>) {
-  function ObservableProvider ({ observable$, children }: PropsWithChildren<ObservableProviderProps<InputType>>) {
+/**
+ * create observable provider
+ * @param Context observable context
+ * @param initSubject$ subject
+ * @returns observable provider
+ */
+export function createObservableProvider <InputType> (Context: ObservableContext<InputType>, initSubject$: BehaviorLikeSubject<InputType>) {
+  function ObservableProvider ({ subject, children, value }: PropsWithChildren<ObservableProviderProps<InputType>>) {
+    const realSubject = subject ?? initSubject$
+    useIsomorphicLayoutEffect(() => {
+      if (value) {
+        realSubject.next(value)
+      }
+    }, [value])
+
     return (
-      <Context.Provider value={observable$ ?? initObservable$}>
+      <Context.Provider value={subject ?? initSubject$}>
         {children}
       </Context.Provider>
     )
