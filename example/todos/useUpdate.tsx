@@ -2,7 +2,7 @@ import { useCallback } from 'react'
 import { useObservableNext } from './observableStore'
 import { VisibilityFilters } from './type'
 
-let id = 0
+let id = 10000
 const getId = () => (id++)
 
 export function useUpdate () {
