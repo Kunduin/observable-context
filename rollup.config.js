@@ -8,6 +8,7 @@ import sourceMaps from 'rollup-plugin-sourcemaps'
 import typescript from 'rollup-plugin-typescript2'
 import { terser } from 'rollup-plugin-terser'
 import { REPO_NAME, OUTPUT_DIR } from './config.js'
+import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 
 /**
  * @type {import('rollup').OutputOptions}
@@ -47,6 +48,7 @@ export default defineConfig({
   // Establish Rollup output
   output,
   plugins: [
+    peerDepsExternal(),
     resolve({
       mainFields: [
         'module',

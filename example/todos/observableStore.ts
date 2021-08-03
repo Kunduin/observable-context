@@ -1,4 +1,4 @@
-import { createObservableContext } from 'observable-context'
+import { createObservableContext } from '../../src'
 import { Root, VisibilityFilters } from './type'
 
 export const { ObservableProvider, useObservableSelector, useObservableOperator, useObservable, useObservableNext } =
