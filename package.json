@@ -1,9 +1,9 @@
 {
   "name": "observable-context",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Rxjs + React Context + useReducer = Small Redux !!",
   "type": "module",
-  "main": "dist/observable-context.cjs.development.js",
+  "main": "dist/index.js",
   "module": "dist/observable-context.esm.js",
   "files": [
     "src",
@@ -58,7 +58,6 @@
     "eslint-plugin-promise": "^4.3.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "np": "^7.5.0",
-    "observable-context": "^0.0.2",
     "rollup": "^2.53.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-sourcemaps": "^0.6.3",
