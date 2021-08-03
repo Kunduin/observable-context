@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Rxjs + React Context + useReducer = Small Redux !!",
   "type": "module",
-  "main": "dist/index.js",
+  "main": "dist/observable-context.cjs.development.js",
   "module": "dist/observable-context.esm.js",
   "files": [
     "src",
@@ -62,7 +62,8 @@
     "rollup-plugin-sourcemaps": "^0.6.3",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
-    "typescript": "^4.3.5"
+    "typescript": "^4.3.5",
+    "observable-context": "^0.0.1"
   },
   "peerDependencies": {
     "react": ">=16.8",
